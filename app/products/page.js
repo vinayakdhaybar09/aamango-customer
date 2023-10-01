@@ -50,6 +50,9 @@ const page = () => {
   useEffect(() => {
     getAllProducts();
   }, []);
+  useEffect(() => {
+    getAllProducts();
+  }, []);
 
   console.log(productData);
 
