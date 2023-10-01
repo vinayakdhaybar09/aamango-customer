@@ -1,91 +1,113 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from './page.module.css'
+"use client"
+import Image from "next/image";
+// import { Inter } from 'next/font/google'
+import styles from "./page.module.css";
+import heroImg from "../public/images/heroImg.png";
+import one from "../public/images/1.png";
+import two from "../public/images/2.png";
+import three from "../public/images/3.png";
+import four from "../public/images/4.png";
+import five from "../public/images/5.png";
+import six from "../public/images/6.png";
 
-const inter = Inter({ subsets: ['latin'] })
+import whoImg from "../public/images/whoImg.jpeg";
+import whoImg2 from "../public/images/whoImg2.png";
+import Link from "next/link";
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { checkLogin } from "@/redux/userSlice";
+
+// const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+
+  const dispacth = useDispatch()
+
+  useEffect(() => {
+    dispacth(checkLogin())
+  }, [])
+  
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
+    <main className={styles.homePage}>
+      <div className={styles.heroSection}>
+        <div className={styles.heroData}>
+          <h1>Handpicked Mangoes Specially for Your Family.</h1>
+          <p>
+            Juicy, Fresh, and Convenient: Mangoes Delivered Right to Your
+            Doorstep!
+          </p>
+          <Link href={"/products"} className={styles.productBtn}>
+            Order Now
+          </Link>
+        </div>
         <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
+          <Image src={heroImg} alt="Mango img" className={styles.heroImg} />
+        </div>
+      </div>
+
+      <div className={styles.infoBgSection}>
+        <p>
+          Kokan is well-known for growing some of the worldsbest mangos. We
+          harvest the most prime mangos we can find each day.
+        </p>
+      </div>
+
+      <div className={styles.whySection}>
+        <h3 className={styles.whySectionTitle}>Why aamango ?</h3>
+        <div className={styles.whyContainer}>
+          <div className={styles.whyImgBox}>
+            <Image src={one} alt="one" className={styles.whyImg} />
+            <p>Varieties of Mangoes</p>
+          </div>
+          <div className={styles.whyImgBox}>
+            <Image src={two} alt="one" className={styles.whyImg} />
+            <p>Directly From Farmers</p>
+          </div>
+          <div className={styles.whyImgBox}>
+            <Image src={three} alt="one" className={styles.whyImg} />
+            <p>100% Organic Mangoes</p>
+          </div>
+          {/* </div> */}
+          {/* <div className={styles.whyContainer}> */}
+          <div className={styles.whyImgBox}>
+            <Image src={four} alt="four" className={styles.whyImg} />
+            <p>Chemical & Carbide Free</p>
+          </div>
+          <div className={styles.whyImgBox}>
+            <Image src={five} alt="one" className={styles.whyImg} />
+            <p>Delicious & Pulpy </p>
+          </div>
+          <div className={styles.whyImgBox}>
+            <Image src={six} alt="one" className={styles.whyImg} />
+            <p>All Over India Delivery </p>
+          </div>
+        </div>
+      </div>
+
+      <div className={styles.whoSection}>
+        <h3 className={styles.whoSectionTitle}>Who are we ?</h3>
+        <div className={styles.whoInfo}>
+          <p className={styles.whoInfoData}>
+            Mango is regarded as the king of fruits and is one of the most
+            widely produced fruits in India. Aamango is your route to the
+            goodness of Indian mangoes. It doesn't matter which variety of mango
+            you prefer because aamango has them all in one location. We are a
+            company that focusing on providing you with all varieties of real
+            Indian mangoes that are residue-free. Choose the variety of mango
+            you are craving and buy it right away if you are in the mood for a
+            juicy one.
+          </p>
+          <div className={styles.whoImageBox}>
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
+              src={whoImg}
+              alt="Mango in basket"
+              className={styles.whoImage}
             />
-          </a>
+            <Image src={whoImg2} alt="Mangoes" className={styles.whoImageTwo} />
+          </div>
         </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
       </div>
     </main>
-  )
+  );
 }

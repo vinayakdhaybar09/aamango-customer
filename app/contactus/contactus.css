@@ -1,0 +1,88 @@
+.contactus-section {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  align-items: center;
+  color: #721312;
+  gap: 30px;
+}
+
+.contactus-title {
+  font-size: 110px;
+  /* background: linear-gradient(
+    0deg,
+    rgba(114, 19, 18, 1) 0%,
+    rgba(231, 113, 5, 1) 73%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+}
+
+.contactus-content {
+  text-align: center;
+  width: 70%;
+}
+
+.contactus-whatsapp-btn {
+  padding: 15px 15px;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  border: 50%;
+  background-color: #e77105;
+  color: white;
+  border-radius: 50px;
+  font-size: 24px;
+  cursor: pointer;
+}
+.contactus-whatsapp-btn p {
+  /* align-self: center; */
+  text-align: center !important;
+}
+.contactus-whatsapp-box {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  align-self: flex-end;
+}
+.contactus-whatsapp-icon {
+  /* width: 50px;
+    height: 50px; */
+  /* padding: 15px; */
+  font-size: 28px;
+  color: green;
+}
+
+.contactus-media-icons {
+  display: flex;
+  align-items: center;
+  font-size: 40px;
+  gap: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .contactus-section {
+    height: 90vh;
+    justify-content: center;
+    padding: 0 30px;
+  }
+  .contactus-title {
+    font-size: 50px;
+  }
+
+  .contactus-content {
+    width: 90%;
+  }
+
+  .contactus-whatsapp-btn {
+    width: 100%;
+    padding: 12px 12px;
+    font-size: 22px;
+  }
+}

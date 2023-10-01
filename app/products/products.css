@@ -1,0 +1,68 @@
+.products-section {
+  background: linear-gradient(to bottom, #fff6cd 0%, #ffe8e4 100%);
+  margin: 30px 80px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border-radius: 10px;
+}
+
+.products-title {
+  color: #851d1d;
+  font-weight: 600;
+  text-align: center;
+  font-size: 30px;
+}
+
+.product-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.product-box {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 400px;
+  cursor: pointer;
+}
+
+.prodcut-info {
+  color: #ffd27f;
+  align-self: flex-end;
+}
+
+.product-img {
+  width: 230px;
+  height: 230px;
+  align-self: center;
+  transition: all 0.5s;
+}
+
+.product-img:hover {
+  transform: scale(1.1);
+}
+
+.product-name {
+  color: #851d1d;
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+}
+
+.product-price {
+  color: #851d1d;
+  font-weight: 600;
+  font-size: 22px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .products-section {
+    margin: 30px;
+  }
+}
